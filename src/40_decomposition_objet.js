@@ -1,17 +1,20 @@
-const population = 7e7;
-const satellite = "Lune";
-const temperature = {
-  min: -70,
-  max: 60,
-};
+const population = 50;
 
-const pop = "population";
 
 const terre = {
-  [pop]: population,
-  satellite,
-  temperature,
+  population: 7e7,
+  satellite: "Lune",
+  temperature:{
+    min: -70,
+    max: 60,
+  },
   isOld: false,
 };
 
-console.log(terre);
+const { temperature, ...reste } = terre;
+
+
+
+
+console.log(temperature, reste);
+
